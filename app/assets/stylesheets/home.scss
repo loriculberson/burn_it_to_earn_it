@@ -1,6 +1,7 @@
 .home-image { 
   background: asset-url("big_burger.jpg") no-repeat center center fixed; 
   background-size: cover;
+  background-attachment: fixed;
   height: 1428px;
   padding: 0;
   margin: 0;
