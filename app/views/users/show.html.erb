@@ -3,24 +3,31 @@
     <div class="col-xs-12">
 
       <div class="col-xs-3 centered">
-        <%= image_tag('profile_photo.jpg', size: "100", class: "img-circle img-thumbnail home-image") %>
+        <%= image_tag('profile_photo.jpg', class: "img-circle img-thumbnail home-image") %>
         <h3> Lori Culberson </h3>
-        <h4> irongirltx </h4><br>
-        <strong>Age: 44</strong><br>
-        <strong>Fitness:</strong> Intermediate<br>
-        <strong>Splurges:</strong><br>
-        Burgers<br>
-        French fries<br>
-        Chardonnay<br>
+
+        <h4><em> irongirltx</em></h4>
+        <hr>
+        <strong>Age</strong><br>
+        <p>44</p>
+        <strong>Fitness</strong> 
+        <p>Intermediate</p>
+        <strong>Splurges</strong>
+     
+          <p>Burgers<br>
+         French fries<br>
+          skittles<br>
+        </p>
+       
         <%= link_to "Edit profile", edit_user_path %>
       </div>
 
       <div class='col-xs-9'>
        
-      <div = class'col-xs-6'>
+      <div class='col-xs-6'>
       <h2 class="food-selector"> What's your splurge? </h2>
       <div class="search-box" id="custom-search-input">
-        <div class="input-group col-xs-4">
+        <div class="input-group col-xs-8">
           <input type="text" class="  search-query form-control" placeholder="Search" />
           <span class="input-group-btn">
             <button class="btn btn-danger" type="button">
@@ -31,8 +38,8 @@
         </div>
       </div>
 
-       <div = class'col-xs-6'>
-        <h2 class="food-selector"> Select an exercise:</h2>
+       <div class='col-xs-6'>
+        <h2 class="food-selector"> Select an exercise</h2>
         <%= render 'exercise_options' %>
        </div>
 
