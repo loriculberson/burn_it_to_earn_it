@@ -1,4 +1,21 @@
-.header-wrap {
-  color: white;
-  margin-bottom: -55px;
+.nav-margin {
+  margin-top: 0px;
+} 
+
+ul.nav li a, ul.nav li a:visited {
+  color: #000000 !important;
+}
+
+ul.nav li a:hover, ul.nav li a:active {
+  color: #712aff !important;
+}
+
+ul.nav li.active a {
+  color: #ffffff !important;
+}
+
+.table-margin {
+  margin-left: 50px;
+  margin-top: 30px;
+  display:block;
 }

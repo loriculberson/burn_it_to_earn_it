@@ -1,5 +1,5 @@
 <div class="registration-image">
-  <div class="form col-xs-6">
+  <div class="form col-xs-6 table-margin">
     <h1>Health Profile</h1>
 
     <%= form_for(:user, url: health_profiles_path, method: :post, role:"form") do |f| %>
@@ -17,55 +17,7 @@
         <%= label_tag(:weight, "Weight (lbs)") %> 
         <%= number_field(:user, :weight, in: 80..400.0, step: 1.0) %>
 
-        <h4>Select a fitness level</h4>
-
-        <div class="radio">
-          <label>
-            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-            <p><strong> Sedentary </strong></p>
-            <ul> 
-              <li> At work - you work in an office </li>
-              <li> At home - you're usually sitting, reading, typing or working at a computer </li>
-              <li> Exercise - you don't exercise regularly</li>
-            </ul>
-          </label>
-        </div>
-
-        <div class="radio">
-          <label>
-            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option2">
-            <p><strong> Light Activity </strong></p>
-            <ul> 
-              <li> At work - you walk a lot </li>
-              <li> At home - you keep yourself busy and move a lot</li>
-              <li> Exercise - you participate in light exercise or take long walks </li>
-            </ul>
-          </label>
-        </div>
-
-          <div class="radio">
-          <label>
-            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option3">
-            <p><strong> Moderate Activity </strong></p>
-            <ul> 
-              <li> At work - you are very active much of the day </li>
-              <li> At home - you rarely sit and do heavy housework or gardening</li>
-              <li> Exercise - you exercise several times a week and push yourself pretty hard </li>
-            </ul>
-          </label>
-        </div>
-
-          <div class="radio">
-          <label>
-            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option4">
-            <p><strong> Very Active </strong></p>
-            <ul> 
-              <li> At work - you hold a labor-intensive job such as construction worker or bicycle messenger </li>
-              <li> At home - you are very active with heavy lifting and other rigorous activities</li>
-              <li> Exercise - you participate in physical sports such as jogging or mountain-biking each day </li>
-            </ul>
-          </label>
-        </div>
+        <%= render 'health_profiles/activity_level_data' %>
 
         <%= f.submit "Submit", class: "btn btn-info" %>
 
