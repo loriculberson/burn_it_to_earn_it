@@ -4,6 +4,7 @@ class HealthProfilesController < ApplicationController
   end
   
   def index
+    @body_class="registration-image"
   end
 
   def create

@@ -1,2 +1,2 @@
-require 'fatsecret'
-FatSecret.init(ENV['FATSECRET_KEY'],ENV['FATSECRET_SECRET'])
+# require 'fatsecret'
+# FatSecret.init(ENV['FATSECRET_KEY'],ENV['FATSECRET_SECRET'])
