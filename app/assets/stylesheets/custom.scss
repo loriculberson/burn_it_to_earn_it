@@ -1,6 +1,5 @@
 .nav-margin {
 color: #fff;
-margin-top: 15px;
 } 
 
 .twitter-name-correction {
@@ -18,6 +17,11 @@ ul.nav li {
   font-weight: bold;
   padding: 10px;
   vertical-align: middle;
+
+}
+
+ul.nav-right li {
+  padding-right: 30px;
 }
 
 ul.nav li a, ul.nav li a:visited {
