@@ -1,5 +1,14 @@
+.navbar {
+  border: 0px;
+}
+
+.navbar-transparent{
+  padding-right: 30px;
+}
+
 .nav-margin {
 color: #fff;
+
 } 
 
 .twitter-name-correction {
@@ -10,6 +19,8 @@ color: #fff;
 .nav-black-margin {
   color: #fff;
   background: #000;
+  border-radius:0px;
+  padding-right: 30px;
 } 
 
 ul.nav li {
