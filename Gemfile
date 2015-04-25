@@ -13,11 +13,19 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'fatsecret-api'
 gem 'omniauth-twitter'
 
+
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
   gem 'dotenv-rails'
+  gem 'rspec-rails'
+  gem 'capybara-rails'
+  gem 'launchy'
+  gem 'pry'
+  gem 'simplecov'
+  gem "better_errors"
+  gem 'database_cleaner'
 end
 
 
