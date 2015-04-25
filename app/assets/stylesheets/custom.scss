@@ -1,6 +1,14 @@
+.navbar {
+  border: 0px;
+}
+
+.navbar-transparent{
+  padding-right: 30px;
+}
+
 .nav-margin {
 color: #fff;
-margin-top: 15px;
+
 } 
 
 .twitter-name-correction {
@@ -11,6 +19,8 @@ margin-top: 15px;
 .nav-black-margin {
   color: #fff;
   background: #000;
+  border-radius:0px;
+  padding-right: 30px;
 } 
 
 ul.nav li {
@@ -18,6 +28,11 @@ ul.nav li {
   font-weight: bold;
   padding: 10px;
   vertical-align: middle;
+
+}
+
+ul.nav-right li {
+  padding-right: 30px;
 }
 
 ul.nav li a, ul.nav li a:visited {
