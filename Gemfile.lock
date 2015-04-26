@@ -59,14 +59,6 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
-    capybara-console (0.0.4)
-      capybara
-      rails (>= 3.0)
-    capybara-rails (0.0.2)
-      capybara
-      capybara-console
-      database_cleaner
-      exception_notification
     coderay (1.1.0)
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
@@ -84,9 +76,6 @@ GEM
     dotenv-rails (2.0.1)
       dotenv (= 2.0.1)
     erubis (2.7.0)
-    exception_notification (4.1.0)
-      actionmailer (>= 3.0.4)
-      activesupport (>= 3.0.4)
     execjs (2.5.2)
     fatsecret-api (0.2.1)
     globalid (0.3.5)
@@ -227,7 +216,7 @@ DEPENDENCIES
   better_errors
   bootstrap-sass (~> 3.3.4)
   byebug
-  capybara-rails
+  capybara
   coffee-rails (~> 4.1.0)
   database_cleaner
   dotenv-rails
