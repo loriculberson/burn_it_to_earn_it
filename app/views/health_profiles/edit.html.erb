@@ -2,7 +2,7 @@
   <div class="form col-xs-4 table-margin">
     <h1><%= current_user.nickname %>'s Health Profile</h1>
 
-    <%= form_for(:user, url: health_profile_path, method: :patch, role:"form") do |f| %>
+    <%= form_for(current_user, url: health_profile_path, method: :patch, role:"form") do |f| %>
 
       <div>
       <strong> Gender</strong> <br>
