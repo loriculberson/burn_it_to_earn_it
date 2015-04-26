@@ -20,7 +20,7 @@ group :development, :test do
   gem 'spring'
   gem 'dotenv-rails'
   gem 'rspec-rails'
-  gem 'capybara-rails'
+  gem 'capybara'
   gem 'launchy'
   gem 'pry'
   gem 'simplecov'
