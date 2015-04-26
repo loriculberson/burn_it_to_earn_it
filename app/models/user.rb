@@ -13,4 +13,8 @@ class User < ActiveRecord::Base
   def first_time?
     age.nil?
   end
+
+  def missing_weight?
+    weight.nil?
+  end
 end
