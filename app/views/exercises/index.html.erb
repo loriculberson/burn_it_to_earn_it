@@ -1,0 +1,32 @@
+<div class="container">
+ <div class="row">
+    <div class="col-xs-12">
+    <h1> If You Eat... </h1>
+
+  <div class="col-xs-8">
+    <table class="table table-condensed">
+      <tr>
+        <th>Exercise</th>
+        <th>Per Hour Pace</th>
+        <th>Intensity (METS)</th>
+        <th>Time to Burn it Off</th>
+      </tr>
+
+        <% @exercises.each do |exercise| %>
+          <tr class="" border ="1">
+            <td> <%= exercise.name %></td>
+            <td> <%= exercise.pace %></td> 
+            <td> <%= exercise.mets %></td>
+            <td> mock time to burn off</td>
+          </tr>
+        <% end %>
+    </table>
+  </div>
+
+    <div class="col-xs-4 pull-right">
+      <%= image_tag('WILL-RUN-FOR-FOOD_right.png') %>
+    </div>
+
+    </div>  
+  </div>
+</div>

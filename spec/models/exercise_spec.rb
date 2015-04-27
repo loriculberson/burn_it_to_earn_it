@@ -12,14 +12,14 @@ RSpec.describe Exercise, type: :model do
     expect(exercise).not_to be_valid
   end
 
-  it "is not valid when pace is nil"  do
-    exercise.pace = nil
+  it "is not valid when mets is nil"  do
+    exercise.mets = nil
     expect(exercise).not_to be_valid
   end
 
-  it "is not valid with duplicate name and pace" do
+  it "is not valid with duplicate name and mets" do
     exercise
-    exercise2 = Exercise.new(name: "Running 10 mi/hr", pace: "6 min/mi")
+    exercise2 = Exercise.new(name: "Running 10 mi/hr", mets: 16.0)
     expect(exercise2).not_to be_valid 
   end
 end

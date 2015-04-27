@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   # post '/login'     => 'sessions#create'
   resources :users
   resource :health_profile
+  resources :exercises
 
 end
