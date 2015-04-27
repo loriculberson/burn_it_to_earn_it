@@ -1,14 +1,21 @@
 <div class="container">
  <div class="row">
-    <div class="col-xs-12">
-    <h1> If You Eat... </h1>
+    <div class="col-xs-10">
+    <div>
+      <h2> If You Eat Strawberry Cheesecake, Calories: 700</h3>
+    </div>
+      <p> If you're a foodie, it's likely that you are no stranger to the 
+          delicious desserts from the Cheesecake Factory. But how much time will it
+          take to burn off that plurge? For the average 150 pound person who is 
+          moderately fit, here are a few ways to burn off that slice of yummy goodness!
+      </p>
 
   <div class="col-xs-8">
     <table class="table table-condensed">
       <tr>
         <th>Exercise</th>
         <th>Per Hour Pace</th>
-        <th>Intensity (METS)</th>
+        <th>Intensity<br> (METS)</th>
         <th>Time to Burn it Off</th>
       </tr>
 
@@ -17,7 +24,7 @@
             <td> <%= exercise.name %></td>
             <td> <%= exercise.pace %></td> 
             <td> <%= exercise.mets %></td>
-            <td> mock time to burn off</td>
+            <td> <%= exercise.burn_time %></td>
           </tr>
         <% end %>
     </table>
