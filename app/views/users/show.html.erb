@@ -1,26 +1,34 @@
 <div class="container"> 
   <div class="row">
     <div class="col-xs-12">
-
+    <h1> <%= current_user.first_name %>'s Dashboard </h1>
       <div class="col-xs-3 centered">
         <%= image_tag('profile_photo.jpg', class: "img-circle img-thumbnail user-image") %>
-        <h3> <%= current_user.first_name %> </h3>
-
         <h4><em> <%= current_user.nickname %></em></h4>
         <hr>
         <strong>Age</strong><br>
         <p><%= current_user.age %></p>
-        <strong>Fitness</strong> 
+
+         <strong>Weight</strong><br>
+        <p><%= current_user.weight %></p>
+        
+        <strong>Fitness Level</strong> 
         <p><%= current_user.fitness_level%></p>
-        <strong>Splurges</strong>
-     
+        <strong>Favorite Foods</strong>
           <p>Burgers<br>
          French fries<br>
           skittles<br>
         </p>
+
+        <strong>Favorite Exercises</strong>
+          <p>Swimming<br>
+         Biking<br>
+          Running<br>
+        </p>
        
         <%= link_to "Edit profile", edit_user_path %>
       </div>
+
 
       <div class='col-xs-9'>
        

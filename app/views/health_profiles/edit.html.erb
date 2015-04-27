@@ -1,33 +1,29 @@
 <div class="registration-image">
-  <div class="form col-xs-6 table-margin">
-    <h1>Health Profile</h1>
+  <div class="form col-xs-4 table-margin">
+    <h1><%= current_user.nickname %>'s Health Profile</h1>
 
-    <%= form_for(:user, url: health_profile_path, method: :patch, role:"form") do |f| %>
+    <%= form_for(current_user, url: health_profile_path, method: :patch, role:"form") do |f| %>
 
-      <strong> Gender</strong> 
+      <div>
+      <strong> Gender</strong> <br>
         <%= f.label(:gender_female, "Female") %>
         <%= f.radio_button(:gender, "female") %>
 
         <%= f.label(:gender_male, "Male") %>   
         <%= f.radio_button(:gender, "male") %>
+      </div>
 
-        <%=f.label(:first_name, "First Name") %>
-        <%= f.text_field(:first_name) %>
-
-        <%=f.label(:last_name, "Last Name") %>
-        <%= f.text_field(:last_name ) %>
-
-        <%=f.label(:email, "Email") %>
-        <%= f.text_field(:email) %>
-
+      <div >
         <%= f.label(:age, "Age") %>   
-        <%= f.number_field(:age, in: 1.0..100.0, step: 1.0) %>
+        <%= f.number_field(:age, in: 1.0..100.0, step: 1.0, class: "form-control") %>
 
         <%= f.label(:weight, "Weight (lbs)") %> 
-        <%= f.number_field(:weight, in: 80..400.0, step: 1.0) %>
+        <%= f.number_field(:weight, in: 80..400.0, step: 1.0, class: "form-control") %>
+      </div>
 
+      <div >
         <%= render partial: "health_profiles/activity_level_data", locals: { f: f} %>
-
+      </div>
         <%= f.submit "Submit", class: "btn btn-info" %>
 
     <% end %>

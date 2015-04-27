@@ -26,6 +26,7 @@ group :development, :test do
   gem 'simplecov'
   gem "better_errors"
   gem 'database_cleaner'
+  gem "factory_girl_rails", "~> 4.0"
 end
 
 

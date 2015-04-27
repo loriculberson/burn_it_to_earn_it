@@ -1,5 +1,6 @@
 .navbar {
   border: 0px;
+  margin-bottom: 0px;
 }
 
 .navbar-transparent{
@@ -43,6 +44,7 @@ ul.nav li a, ul.nav li a:visited {
 ul.nav li a:hover, ul.nav li a:active {
   color: #FFD700 !important;
   background: transparent;
+  background-color: transparent;
 }
 
 .table-margin {

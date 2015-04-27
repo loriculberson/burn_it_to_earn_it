@@ -5,31 +5,45 @@ RSpec.describe "first time user", type: :feature do
     OmniAuth.config.mock_auth[:twitter] = nil
   end
 
-  it "can see the health profile page after successful twitter login" do 
+  def log_in_with_twitter
     visit '/'
     mock_omniauth_user
     click_on "Sign in with twitter"
-    expect(page).to have_content("Health Profile")
   end
 
-  it "fills in health profile info" do
-    visit '/'
-    mock_omniauth_user
-    click_on "Sign in with twitter"
-    choose 'Female'
+  def update_general_user_info
     fill_in 'user[first_name]', with: 'Wendy'
     fill_in 'user[last_name]', with: 'Smith'
     fill_in 'user[email]', with: 'wendy@example.com'
+    click_button "Submit"
+  end
+
+  it "can see the health profile page after successful twitter login" do 
+    log_in_with_twitter
+    expect(page).to have_content("Your Info")
+  end
+
+  it "fills in general user profile info" do
+    log_in_with_twitter
+    update_general_user_info
+
+    expect(page).to have_content("Health Profile")
+  end
+
+  it "fills in health information" do
+    log_in_with_twitter
+    update_general_user_info
+
+    choose 'Female'
     fill_in 'user[age]', with: '25'
     fill_in 'user[weight]', with: '150'
-    choose 'Crazy Fit'
+    choose 'Diesel Fit'
     click_button "Submit"
 
-    expect(page).to have_content("Female")
-    expect(page).to have_content("Wendy Smith")
-    expect(page).to have_content("wendy@example.com")
+    expect(page).to have_content("Wendy")
     expect(page).to have_content("25")
     expect(page).to have_content("150")
-    expect(page).to have_content("Crazy Fit")
+    expect(page).to have_content("Diesel Fit")
+
   end
 end
