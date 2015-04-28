@@ -24,7 +24,7 @@ class Seed
     Food.create(name:"California Cheeseburger", serving: "1", brand:"Sonic", calories: 830, fat: 50)
     Food.create(name:"Jr. Chili Cheeseburger", serving: "1", brand:"Sonic", calories: 410, fat: 24)
     Food.create(name:"Spaghetti & Meatballs", serving: "1", brand:"Noddles & Company", calories: 630, fat: nil)
-    Food.create(name:"Sausage and Pepperoni", serving: "1 slice", brand:"Dominoes", calories: 240, fat: nil)
+    Food.create(name:"Pizza - Sausage and Pepperoni", serving: "1 slice", brand:"Dominoes", calories: 240, fat: nil)
     Food.create(name:"Strawberry Cheesecake", serving: "1 slice", brand:"Cheesecake Factory", calories: 700, fat: 30)
   end
 

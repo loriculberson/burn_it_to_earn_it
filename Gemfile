@@ -12,6 +12,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'fatsecret-api'
 gem 'omniauth-twitter'
+gem 'fitgem'
 
 
 group :development, :test do
