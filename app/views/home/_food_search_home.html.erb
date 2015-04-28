@@ -1,0 +1,18 @@
+
+<%= form_tag(url: health_profile_path, method: :post) do %>
+
+  <div>
+    <%= label_tag(:select_food) %>  
+    <%= select_tag(:food, options_for_select([['Spaghetti',630],
+      ['Cheesecake',700],['California Burger',830], ['Jr. Chili Burger',410],
+      ['Pizza - Sausage & Pepperoni',240]])) %>
+ 
+    <%= label_tag(:enter_weight) %>  
+    <span class="weight"><%= number_field_tag(:weight, class: "form-control") %></span>
+  </div>
+
+  <div class="btn btn-success white-text">
+    <%= link_to 'EARN IT NOW!', exercises_path,method: :get %>
+  </div>
+
+<% end %>

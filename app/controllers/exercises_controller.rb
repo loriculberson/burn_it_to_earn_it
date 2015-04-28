@@ -9,3 +9,6 @@ class ExercisesController < ApplicationController
     end
   end
 end
+
+
+@exercises = 

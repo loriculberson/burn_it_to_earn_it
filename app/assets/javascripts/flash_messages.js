@@ -1,4 +1,4 @@
 //fadeout flash messages
 $( document ).ready(function() {
-  $(".flash").fadeTo(1200,0); 
+  $(".flash").fadeTo(2000,0); 
 });
