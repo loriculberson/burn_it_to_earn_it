@@ -15,7 +15,7 @@ RSpec.describe "users see sample food and exercise table", type: :feature do
     end
   end
 
-  it "can select a food item and time will change" do     
+  xit "can select a food item and time will change" do     
     visit exercises_path
     choose "California Cheeseburger"
     within('table') do 

@@ -2,32 +2,32 @@
  <div class="row">
     <div class="col-xs-10">
     <div>
-      <h2> Mmmmm....wanna spluge? </h3>
+      <h1> Cheesecake? </h1>
+      <h3> That's <em>only</em> 700 calories!</h3>
+      <h4> For the average 150 pound person, here are some ways to earn that splurge!</h4>
     </div>
-      <p> If you're a foodie, it's likely that you are no stranger to the 
-          delicious desserts from the Cheesecake Factory. But how much time will it
-          take to burn off that plurge? For the average 150 pound person who is 
-          moderately fit, here are a few ways to burn off that slice of yummy goodness!
-      </p>
 
   <div class="col-xs-8">
     <table class="table table-condensed">
       <tr>
+        <th></th>
         <th>Exercise</th>
-        <th>Per Hour Pace</th>
-        <th>Intensity<br> (METS)</th>
         <th>Time to Burn it Off</th>
       </tr>
 
         <% @exercises.each do |exercise| %>
           <tr class="" border ="1">
+            <td><%= check_box_tag "exercises_ids[]", exercise.id %></td>
             <td> <%= exercise.name %></td>
-            <td> <%= exercise.pace %></td> 
-            <td> <%= exercise.mets %></td>
             <td> <%= exercise.burn_time %></td>
           </tr>
         <% end %>
     </table>
+
+    <div class="btn btn-success white-text">
+    <%= link_to 'Save it!', exercises_path,method: :get %>
+    </div>
+    <em>(click here to save your workout!)</em>
   </div>
 
     <div class="col-xs-4 pull-right">

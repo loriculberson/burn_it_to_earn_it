@@ -1,5 +1,5 @@
 
-<%= form_tag(url: health_profile_path, method: :post) do %>
+<%= form_tag(exercises_path) do %>
 
   <div>
     <%= label_tag(:select_food) %>  
@@ -11,8 +11,8 @@
     <span class="weight"><%= number_field_tag(:weight, class: "form-control") %></span>
   </div>
 
-  <div class="btn btn-success white-text">
-    <%= link_to 'EARN IT NOW!', exercises_path,method: :get %>
-  </div>
+  <p>
+    <%= submit_tag 'EARN IT NOW!', class:'btn btn-success'%>
+  </p>
 
 <% end %>
