@@ -9,8 +9,8 @@ class ExercisesController < ApplicationController
       # @exercises = current_user.favorite_exercises
     # else
     end
-
   end
+  
     def create
       if current_user.nil?
         redirect_to exercises_path
