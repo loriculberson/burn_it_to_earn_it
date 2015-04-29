@@ -10,11 +10,12 @@ class ExercisesController < ApplicationController
     # else
     end
   end
-  
+
     def create
-      if current_user.nil?
-        redirect_to exercises_path
-      end
+      require 'pry';binding.pry
+    client = Fitgem::Client.new(config[:oauth])
+    response = client.find_food(params[:search])
+       
     end
 end
 
