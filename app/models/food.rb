@@ -1,15 +1,11 @@
-class Food < ActiveRecord::Base
-  validates :name, :calories, presence: true, uniqueness: true
-  attr_reader :food_name
-
+class Food < OpenStruct
   def self.service
     @service ||= FoodSearchService.new
   end
 
   def self.all(food_name)
-    service.search_foods(food_name).values[0]
+    service.search_foods(food_name).values[0].map do |food|
+      Food.new(food)
+    end
   end
-
-
-  
 end
