@@ -1,18 +1,17 @@
 
-<%= form_tag(exercises_path) do %>
+<div class="column-xs-2"></div>
+  <%= form_tag(food_search_path, method: :get) do %>
 
-  <div>
-    <%= label_tag(:select_food) %>  
-    <%= select_tag(:food, options_for_select([['Spaghetti',630],
-      ['Cheesecake',700],['California Burger',830], ['Jr. Chili Burger',410],
-      ['Pizza - Sausage & Pepperoni',240]])) %>
- 
-    <%= label_tag(:enter_weight) %>  
-    <span class="weight"><%= number_field_tag(:weight, class: "form-control") %></span>
+    <div>
+      <!-- <%= label_tag(:food_search) %> -->
+      <%= text_field_tag(:food_search, nil, placeholder: "search for food", class: "form-control black-text typehead") %><br>
   </div>
 
-  <p>
-    <%= submit_tag 'EARN IT NOW!', class:'btn btn-success'%>
-  </p>
+      <!-- <%= label_tag(:enter_weight) %>   -->
+      <span class="black-text"><%= number_field_tag(:weight, nil, placeholder: "enter weight", min: 50, class: "form-control black-text") %></span><br>
 
-<% end %>
+    <p>
+      <%= submit_tag 'EARN IT NOW!', class:'btn btn-success'%>
+    </p>
+
+  <% end %>

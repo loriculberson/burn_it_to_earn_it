@@ -1,6 +1,12 @@
 class FoodsController < ApplicationController
+
   def index
-    @foods = current_user.foods
+
+    
+
+
+    # @foods = "GET/1/foods/search.json?query=food?search"
+
 
   end
 

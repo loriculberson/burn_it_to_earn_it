@@ -11,10 +11,11 @@ RSpec.feature "authenticated user adds favorites", type: :feature do
     click_on "Sign in with twitter"
   end
 
-it "can add favorites to the user favorites page" do
+xit "can add favorites to the user favorites page" do
     log_in_with_twitter
     visit exercises_path
 
     expect(page).to have_content(@exercise.name)
   end
+end
 

@@ -13,6 +13,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'fatsecret-api'
 gem 'omniauth-twitter'
 gem 'fitgem'
+gem 'nutritionix'
+gem 'faraday'
 
 
 group :development, :test do
@@ -23,7 +25,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'launchy'
-  gem 'pry'
+  gem 'pry-rails'
   gem 'simplecov'
   gem "better_errors"
   gem 'database_cleaner'
