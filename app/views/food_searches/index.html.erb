@@ -1,7 +1,14 @@
-<h1> Foods </h1>
+<h1> Select a Food </h1>
 
 <% @foods.each do |food| %>
   <%= food["brand"] %>
   <%= food["name"] %>: 
   <%= food["calories"] %><br>
+<% end %>
+
+
+<%= form_for(food, remote: true) do |f| %>
+
+<%= f.select(:food, @foods.collect { |food| food['name'] }, {include_blank: 'Choose 1'}) %>
+  <%= f.submit %>
 <% end %>
