@@ -1,20 +1,32 @@
 .home-pg-image { 
-  background: asset-url("big_burger.jpg"); 
+  background: asset-url("runner_female.jpg"); 
   background-size: cover;
   height:100vh;
 }
 
 #app-explanation {
-  text-align: right;
   position:relative;
   color: white;
-  margin-top: 65px;
+  margin-top: 135px;
   margin-right: 20px;
   font-size: 1.5em;
   margin-left: auto;
 }
 
+.center {
+  text-align: center;
+}
+
 /*Change earn it now button text to white*/
 a {
   color: #fff;
+}
+
+img.opacity {
+  opacity:0.6;
+}
+
+.black-text{
+  color:#000;
+  text-align: center;
 }

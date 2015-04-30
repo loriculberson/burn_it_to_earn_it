@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   resources :users
   resource :health_profile
   resources :exercises
-
+  resources :foods
+  resources :food_searches 
 end

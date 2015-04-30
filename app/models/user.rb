@@ -1,4 +1,7 @@
 class User < ActiveRecord::Base
+  validates :first_name, :last_name, :weight, :email, presence: true
+  validates_numericality_of :weight, minimum: 50
+  validates_numericality_of :age, minimum: 10
 
   def self.find_or_create_from_auth(data)
     user = User.find_or_create_by(provider: data.provider, uid: data.uid)

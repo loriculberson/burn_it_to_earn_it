@@ -1,17 +1,20 @@
 <div>
   <div class="row">
 
-    <div class="col-xs-12" >
-      <div class="col-xs-3 pull-right" id="app-explanation">
-      <h2> Burn it to Earn It </h2>
-        <p>  So you want a juicy burger, but you're concerned about the number of calories? <br>
-              Go ahead and eat it! We'll tell you how to burn it off!
-        </p>
-         <div class="btn btn-success white-text">
-          <%= link_to 'EARN IT NOW!', exercises_path,method: :get %>
+    <div class="col-xs-7 center" >
+      <div class="center" id="app-explanation">
+      <h1> Burn it to Earn It </h1>
+        <h3> You want a juicy burger but you're concerned about the number of calories? Go ahead and eat it! Search for a food and enter your weight. We'll tell you <em><br>HOW to BURN IT OFF!</em>
+        </h3>
+        <br>
+        <div class='col-xs-6'>
+          <%= render 'food_search_home' %>
         </div>
+
       </div>
     </div>
   </div>
   
 </div>
+
+

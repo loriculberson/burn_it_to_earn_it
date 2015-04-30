@@ -7,9 +7,16 @@
   <%= csrf_meta_tags %>
 </head>
 <%= render 'layouts/nav_bar' %>
-<body class="<%=@body_class%>">
+  <body class="opacity <%=@body_class%>">
+    <div class="container">
+      <div class="flash">
+        <% flash.each do |name, msg| %>
+          <%= content_tag :div, msg, class: "alert alert-#{name} text-center" %>
+        <% end %>
+      </div>
 
-  <%= yield %>
-
-</body>
+      <%= yield %>
+    </div>
+  </body>
 </html>
+
