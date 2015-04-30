@@ -1,9 +1,9 @@
 <h1> Select a Food </h1>
 
 <% @foods.each do |food| %>
-  <%= food["brand"] %>
-  <%= food["name"] %>: 
-  <%= food["calories"] %><br>
+  <%= food.brand %>
+  <%= food.name %>: 
+  <%= food.calories %><br>
 <% end %>
 
 
