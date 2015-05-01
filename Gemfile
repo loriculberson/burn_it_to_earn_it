@@ -13,7 +13,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'fatsecret-api'
 gem 'omniauth-twitter'
 gem 'fitgem'
-gem 'nutritionix'
+gem 'responders' #json
 gem 'faraday'
 
 

@@ -1,5 +1,4 @@
 class Food < OpenStruct
-  validates :name, :calories, presence: true, uniqueness: true
   
   def self.service
     @service ||= FoodSearchService.new

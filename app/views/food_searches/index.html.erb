@@ -7,8 +7,3 @@
 <% end %>
 
 
-<%= form_for(food, remote: true) do |f| %>
-
-<%= f.select(:food, @foods.collect { |food| food['name'] }, {include_blank: 'Choose 1'}) %>
-  <%= f.submit %>
-<% end %>
