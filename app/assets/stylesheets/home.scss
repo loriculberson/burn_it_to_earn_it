@@ -30,3 +30,8 @@ img.opacity {
   color:#000;
   text-align: center;
 }
+
+#scrollable-dropdown-menu .tt-dropdown-menu {
+  max-height: 150px;
+  overflow-y: auto;
+}

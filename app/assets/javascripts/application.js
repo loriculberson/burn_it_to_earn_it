@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require bootstrap-sprockets
+//= require bootstrap3-typeahead
 //= require jquery_ujs
 //= require_tree .
 
