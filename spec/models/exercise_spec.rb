@@ -22,4 +22,12 @@ RSpec.describe Exercise, type: :model do
     exercise2 = Exercise.new(name: "Running 10 mi/hr", mets: 16.0)
     expect(exercise2).not_to be_valid 
   end
+
+  it "calculates burn time" do
+    exercise = Exercise.new(mets: 16.0)
+
+    weight = 150
+    calories = 600
+    expect(exercise.burn_time(calories, weight)).to eq("33 min")
+  end
 end

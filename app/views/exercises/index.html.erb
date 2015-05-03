@@ -2,9 +2,9 @@
  <div class="row">
     <div class="col-xs-10">
     <div>
-      <h1> Cheesecake? </h1>
-      <h3> That's <em>only</em> 700 calories!</h3>
-      <h4> For the average 150 pound person, here are some ways to earn that splurge!</h4>
+      <h1> <%= @food_search[:name] %>? </h1>
+      <h3> That's <em>only</em> <%= @food_search[:calories] %> calories!</h3>
+      <h4> Since you weigh <%= @weight %>  pounds, here are some ways to earn that splurge!</h4>
     </div>
 
   <div class="col-xs-8">
@@ -19,7 +19,7 @@
           <tr class="" border ="1">
             <td><%= check_box_tag "exercises_ids[]", exercise.id %></td>
             <td> <%= exercise.name %></td>
-            <td> <%= exercise.burn_time %></td>
+            <td> <%= exercise.burn_time(@calories, @weight) %></td>
           </tr>
         <% end %>
     </table>
