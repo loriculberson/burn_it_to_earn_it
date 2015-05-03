@@ -10,14 +10,11 @@ class ExercisesController < ApplicationController
       @exercises = Exercise.some
     else current_user
       @exercises = Exercise.all
-      # @exercises = current_user.favorite_exercises
-    # else
     end
   end
 
     def create
       
-
     end
 end
 
