@@ -1,20 +1,16 @@
-<div class="column-xs-6">
-  <%= form_tag exercises_path do %>
+<div class="column-xs-8">
+  <%= form_tag(exercises_path, method: :get)  do %>
 
     <p>
       <%= text_field(:food_search, nil, autocomplete: "off", 
-                      placeholder: "search for food", class: "form-control black-text typehead", id: "splurge") %>
+                      placeholder: "search for food", class: "form-control black-text typehead", id: "splurge", required: true) %>
     </p>
-<!-- 
-    <div class="results">
-      <ul id="results-list", class="jq-dropdown-menu"></ul>
-    </div> -->
 
     <p>
-      <%= number_field_tag(:weight, nil, placeholder: "enter weight", min: 50, class: "form-control black-text") %>
+      <%= number_field_tag(:weight, nil, placeholder: "enter weight", min: 50, class: "form-control black-text", required: true) %>
     </p>
     <p>
-      <%= submit_tag 'Find My Splurge!', class:'btn btn-success', id: "find-food"%>
+      <%= submit_tag 'EARN IT NOW!', class:'btn btn-success', id: "find-food", disabled: true %>
     </p>
 
   <% end %>

@@ -2,15 +2,15 @@
  <div class="row">
     <div class="col-xs-10">
     <div>
-      <h1> <%= @food_search[:name] %>? </h1>
-      <h3> That's <em>only</em> <%= @food_search[:calories] %> calories!</h3>
+      <h1> <%= @food_search %>sounds delicious! </h1>
+      <h3> That's <em>only</em> <%= @calories %> calories!</h3>
       <h4> Since you weigh <%= @weight %>  pounds, here are some ways to earn that splurge!</h4>
     </div>
 
   <div class="col-xs-8">
     <table class="table table-condensed">
       <tr>
-        <th></th>
+        <span class="exercise-check"><th></th></span>
         <th>Exercise</th>
         <th>Time to Burn it Off</th>
       </tr>
@@ -25,8 +25,9 @@
     </table>
 
     <div class="btn btn-success white-text">
-    <%= link_to 'Save it!', exercises_path,method: :get %>
+      <%= link_to 'Save it!', user_path, method: :post %>
     </div>
+
     <em>(click here to save your workout!)</em>
   </div>
 
