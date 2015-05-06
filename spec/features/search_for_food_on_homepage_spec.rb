@@ -8,9 +8,9 @@ RSpec.describe "user interface with homepage", type: :feature do
 
   it "user searches for a food enter weight "  do
     visit '/'
-    fill_in('Search', with: 'burger')
-    fill_in('Weight', with: '150')
-    click_on 'Earn it!"'
+    fill_in('search for food', with: 'burger')
+    fill_in('enter weight', with: '150')
+    click_on 'EARN IT NOW!'
     expect(page).to have_content('burger')
     
   end
