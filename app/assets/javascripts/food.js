@@ -10,6 +10,7 @@ $(document).ready(function(){
               result.name = result.table.brand + ' '+ result.table.name + ' | Calories: ' + result.table.calories + ' ' 
             })
             processCallback(results);  
+            // #function to tell typehead what the results are
           }
       })
     },
