@@ -2,32 +2,34 @@
  <div class="row">
     <div class="col-xs-10">
     <div>
-      <h1> <%= @food_search %>sounds delicious! </h1>
+      <h1> <%= @food_search %> sounds delicious! </h1>
       <h3> That's <em>only</em> <%= @calories %> calories!</h3>
       <h4> Since you weigh <%= @weight %>  pounds, here are some ways to earn that splurge!</h4>
     </div>
 
   <div class="col-xs-8">
+
+  <%= form_tag workouts_path do %>
     <table class="table table-condensed">
       <tr>
-        <span class="exercise-check"><th></th></span>
+        <th></th>
         <th>Exercise</th>
         <th>Time to Burn it Off</th>
       </tr>
 
-        <% @exercises.each do |exercise| %>
-          <tr class="" border ="1">
-            <td><%= check_box_tag "exercises_ids[]", exercise.id %></td>
-            <td> <%= exercise.name %></td>
-            <td> <%= exercise.burn_time(@calories, @weight) %></td>
-          </tr>
-        <% end %>
+      <% @exercises.each do |exercise| %>
+        <tr class="" border ="1">
+          <td class="exercise-check"><%= radio_button @workouts, "exercise_id", exercise.id %></td>
+          <td> <%= exercise.name %></td>
+          <td> <%= exercise.burn_time(@calories, @weight) %></td>
+        </tr>
+      <% end %>
     </table>
-
-    <div class="btn btn-success white-text">
-      <%= link_to 'Save it!', user_path, method: :post %>
-    </div>
-
+    <%= hidden_field_tag 'workout[weight]', @weight %>
+    <%= hidden_field_tag 'workout[calories]', @calories %>
+    <%= hidden_field_tag 'workout[food_search]', @food_search %>
+    <%= submit_tag 'Save it!', class: "btn btn-success white-text" %>
+  <% end %>
     <em>(click here to save your workout!)</em>
   </div>
 

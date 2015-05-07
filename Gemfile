@@ -10,12 +10,9 @@ gem 'pg'
 gem 'rails_12factor'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'fatsecret-api'
 gem 'omniauth-twitter'
 gem 'fitgem'
 gem 'responders' #json
-gem 'faraday'
-
 
 group :development, :test do
   gem 'byebug'
@@ -30,6 +27,8 @@ group :development, :test do
   gem "better_errors"
   gem 'database_cleaner'
   gem "factory_girl_rails", "~> 4.0"
+  gem 'vcr'
+  gem 'selenium-webdriver'
 end
 
 
