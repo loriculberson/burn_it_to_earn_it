@@ -1,6 +1,6 @@
 $(document).ready(function(){
   
-  $('#splurge').typeahead({
+  $('#scrollable-dropdown-menu').typeahead({
     source: function(splurgeFood, processCallback){
       $.ajax({
           url: '/food_searches.json',
@@ -19,7 +19,6 @@ $(document).ready(function(){
     }
   });
 })
-
 
 
   

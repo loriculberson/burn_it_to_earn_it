@@ -2,7 +2,6 @@ class Seed
 
   def call
     generate_exercises
-    generate_foods
   end
 
   def generate_exercises
@@ -18,14 +17,6 @@ class Seed
     Exercise.create(name: "Swim - moderate", pace: "moderate", mets: 8)
     Exercise.create(name: "Hiking", pace: "moderate", mets: 6.5)
     Exercise.create(name: "Standing", pace: "none", mets: 1.3)
-  end
-
-  def generate_foods
-    Food.create(name:"California Cheeseburger", serving: "1", brand:"Sonic", calories: 830, fat: 50)
-    Food.create(name:"Jr. Chili Cheeseburger", serving: "1", brand:"Sonic", calories: 410, fat: 24)
-    Food.create(name:"Spaghetti & Meatballs", serving: "1", brand:"Noddles & Company", calories: 630, fat: nil)
-    Food.create(name:"Pizza - Sausage and Pepperoni", serving: "1 slice", brand:"Dominoes", calories: 240, fat: nil)
-    Food.create(name:"Strawberry Cheesecake", serving: "1 slice", brand:"Cheesecake Factory", calories: 700, fat: 30)
   end
 
   def self.call
