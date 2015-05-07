@@ -19,7 +19,7 @@ class BurnTimeCalculator
   end
 
   private
-  # attr_reader :calories, :weight, :mets
+  attr_reader :calories, :weight, :mets
   
   def hours
     burn_time_by_exercise.to_s.split(".")[0]

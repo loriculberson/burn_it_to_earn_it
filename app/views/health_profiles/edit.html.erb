@@ -18,7 +18,7 @@
         <%= f.number_field(:age, in: 1.0..100.0, step: 1.0, class: "form-control") %>
 
         <%= f.label(:weight, "Weight (lbs)") %> 
-        <%= f.number_field(:weight, in: 80..400.0, step: 1.0, class: "form-control") %>
+        <%= f.number_field(:weight, in: 80..400.0, step: 1.0, min: 50, class: "form-control", required: true) %>
       </div>
 
       <div >

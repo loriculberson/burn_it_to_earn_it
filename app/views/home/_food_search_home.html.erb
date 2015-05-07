@@ -3,14 +3,15 @@
 
     <p>
       <%= text_field(:food_search, nil, autocomplete: "off", 
-                      placeholder: "search for food", class: "form-control black-text typehead", id: "splurge", required: true) %>
+                      placeholder: "search for food", class: "form-control black-text typehead centered user-search-box ", id: "splurge", required: true) %>
     </p>
-
+    <% if current_user.nil? %>
     <p>
       <%= number_field_tag(:weight, nil, placeholder: "enter weight", min: 50, class: "form-control black-text", required: true) %>
-    </p>
-    <p>
-      <%= submit_tag 'EARN IT NOW!', class:'btn btn-success', id: "find-food" %>
+   </p>
+    <% end %>
+   <p class="centered">
+      <%= submit_tag 'EARN IT NOW!', class: 'btn btn-success', id: "find-food ", disable: true %>
     </p>
 
   <% end %>

@@ -1,9 +1,8 @@
 <div class="registration-image">
   <div class="form col-xs-6 table-margin">
-    <h1>Your Info</h1>
+    <h1><%= current_user.nickname %>'s Info</h1>
 
-<%= form_for(:user, url: health_profile_path, method: :patch, role:"form") do |f| %>
-      <!-- Click submit and the data gets sent to the update action....edit_users_path update hits UsersController update -->
+<%= form_for(current_user, url: health_profile_path, method: :patch, role:"form") do |f| %>
 
 <div>
   <%= f.label :first_name %>

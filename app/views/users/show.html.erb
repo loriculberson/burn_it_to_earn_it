@@ -1,7 +1,12 @@
   <div class="row">
     <div class="col-xs-12">
-    <h1> <%= current_user.first_name %>'s Dashboard </h1>
-      <div class="col-xs-3 centered">
+
+    <% if current_user.first_name.empty? %>
+      <h1> <%= current_user.nickname %>'s Dashboard </h1>
+    <% else %>
+      <h1> <%= current_user.first_name %>'s Dashboard </h1>
+    <% end %>
+      <div class="col-xs-3 centered" id="edit">
         <%= image_tag(current_user.image_url, class: "img-circle img-thumbnail user-image") %>
         <h4><em> <%= current_user.nickname %></em></h4>
         <hr>
@@ -13,15 +18,17 @@
         
         <strong>Fitness Level</strong> 
         <p><%= current_user.fitness_level%></p>
-       
-        <%= link_to "Edit profile", edit_user_path %>
+        <p><%= link_to "Edit profile", edit_user_path(current_user) %></p>
+        <p><%= link_to "Edit Health profile", edit_health_profile_path(current_user) %></p>
       </div>
 
+      <div class='col-xs-9'>
+        <div>
+         <%= render :partial => 'home/food_search_home' %>
+        </div>
+      </div>
 
       <div class='col-xs-9'>
-       <%#= SEARCH BOX GOES HERE %>
-
-      <div class='col-xs-6'>
       <h2> My Scheduled Workouts</h2>
       <table class="table table-condensed">
       <tr>
@@ -32,7 +39,7 @@
         <th></th>
       </tr>
 
-      <% @workouts.each do |workout| %>
+      <% @workouts.reverse.each do |workout| %>
         <tr class="" border ="1">
           <td> <%= workout.food_search %></td>
           <td> <%= workout.calories %></td>
@@ -46,4 +53,3 @@
       </div>
 
     </div>
-  </div>
