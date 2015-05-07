@@ -13,24 +13,36 @@
         
         <strong>Fitness Level</strong> 
         <p><%= current_user.fitness_level%></p>
-
-        <strong>Favorite Workouts</strong>
-          <p>Swimming<br>
-            Biking<br>
-          Running<br>
-        </p>
        
         <%= link_to "Edit profile", edit_user_path %>
       </div>
 
 
       <div class='col-xs-9'>
-       
+       <%#= SEARCH BOX GOES HERE %>
+
       <div class='col-xs-6'>
       <h2> My Scheduled Workouts</h2>
-      <!-- <#% render 'exercises/index' %> -->
+      <table class="table table-condensed">
+      <tr>
+        <th>Splurge</th>
+        <th>Calories</th>
+        <th>Exercise</th>
+        <th>Burn Time</th>
+        <th></th>
+      </tr>
+
+      <% @workouts.each do |workout| %>
+        <tr class="" border ="1">
+          <td> <%= workout.food_search %></td>
+          <td> <%= workout.calories %></td>
+          <td> <%= workout.exercise.name %></td>
+          <td> <%= workout.burn_time %></td>
+        </tr>
+      <% end %>
+    </table>
+   
       <hr>
-      <h2> My Completed Workouts</h2>
       </div>
 
     </div>

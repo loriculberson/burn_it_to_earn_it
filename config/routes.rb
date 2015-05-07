@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   resources :exercises
   resources :foods
   resources :food_searches 
+  resources :workouts
 end

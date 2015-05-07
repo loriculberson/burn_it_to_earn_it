@@ -1,6 +1,8 @@
 class BurnTimeCalculator
+  attr_reader :calories, :weight, :mets
 
   def initialize(calories, weight, mets)
+
     @calories = calories
     @weight = weight
     @mets = mets
@@ -17,7 +19,7 @@ class BurnTimeCalculator
   end
 
   private
-  attr_reader :calories, :weight, :mets
+  # attr_reader :calories, :weight, :mets
   
   def hours
     burn_time_by_exercise.to_s.split(".")[0]
