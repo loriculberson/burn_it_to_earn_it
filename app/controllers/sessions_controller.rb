@@ -19,27 +19,3 @@ class SessionsController < ApplicationController
     flash[:danger] = "Successfully logged out!"
   end
 end
-
-
-    # if don't have workout_page_data
-    #   redirect to the exercises path
-
-    # if I do have workout_page_data create the workout
-    # user.create_workout(session[:workout_page_data])
-
-    # when they come back create the workout
-
-    # app/models/user.rb
-    # class User < ...
-    #   def create_workout(workout_data) 
-    #     require 'pry'
-    #     binding.pry
-    #   end
-    # end
-
-    # session[:workout_page_data]
-    # .each do |exercise_id|
-    #   Workout.create!(user_id: user.id, exercise_id: exercise_id, 
-    #                   calories: calories, food_search: food_search,
-    #                   weight: weight)
-    # end
