@@ -1,6 +1,7 @@
 $(document).ready(function(){
   
   $('#scrollable-dropdown-menu').typeahead({
+
     source: function(splurgeFood, processCallback){
       $.ajax({
           url: '/food_searches.json',
