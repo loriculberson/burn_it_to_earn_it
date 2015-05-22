@@ -1,6 +1,7 @@
 $(document).ready(function(){
   
-  $('#splurge').typeahead({
+  $('#scrollable-dropdown-menu').typeahead({
+
     source: function(splurgeFood, processCallback){
       $.ajax({
           url: '/food_searches.json',
@@ -10,6 +11,7 @@ $(document).ready(function(){
               result.name = result.table.brand + ' '+ result.table.name + ' | Calories: ' + result.table.calories + ' ' 
             })
             processCallback(results);  
+            // #function to tell typehead what the results are
           }
       })
     },
@@ -18,7 +20,6 @@ $(document).ready(function(){
     }
   });
 })
-
 
 
   
