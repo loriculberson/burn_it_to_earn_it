@@ -2,6 +2,7 @@ $(document).ready(function(){
   
   $('#scrollable-dropdown-menu').typeahead({
 
+      items: 'all',
     source: function(splurgeFood, processCallback){
       $.ajax({
           url: '/food_searches.json',
@@ -22,4 +23,3 @@ $(document).ready(function(){
 })
 
 
-  
