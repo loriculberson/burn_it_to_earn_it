@@ -6,6 +6,7 @@ $(document).ready(function(){
       minLength: 3,
       scrollHeight: 4,
       alignWidth: false,
+      
     source: function(splurgeFood, processCallback){
       $.ajax({
           url: '/food_searches.json',
