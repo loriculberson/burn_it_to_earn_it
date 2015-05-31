@@ -3,6 +3,8 @@ $(document).ready(function(){
   $('#scrollable-dropdown-menu').typeahead({
 
       items: 'all',
+      minLength: 3,
+      scrollHeight: 6,
     source: function(splurgeFood, processCallback){
       $.ajax({
           url: '/food_searches.json',
