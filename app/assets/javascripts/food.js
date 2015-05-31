@@ -4,7 +4,8 @@ $(document).ready(function(){
 
       items: 'all',
       minLength: 3,
-      scrollHeight: 6,
+      scrollHeight: 4,
+      alignWidth: false,
     source: function(splurgeFood, processCallback){
       $.ajax({
           url: '/food_searches.json',
