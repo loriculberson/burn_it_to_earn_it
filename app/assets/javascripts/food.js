@@ -2,6 +2,11 @@ $(document).ready(function(){
   
   $('#scrollable-dropdown-menu').typeahead({
 
+      items: 'all',
+      minLength: 3,
+      scrollHeight: 4,
+      alignWidth: false,
+      
     source: function(splurgeFood, processCallback){
       $.ajax({
           url: '/food_searches.json',
@@ -22,4 +27,3 @@ $(document).ready(function(){
 })
 
 
-  
