@@ -4,7 +4,8 @@ RSpec.describe "users see sample food and exercise table", type: :feature do
 
   it "can see the food name that the user selected" do
     visit exercises_path(food_search: { name: "Sour Brite Crawlers" , 
-                         brand: "Trolli", calories: "210"})    
+                         brand: "Trolli", calories: "210"})
+                         save_and_open_page    
     expect(page).to have_content("Sour Brite Crawlers")
   end
 
