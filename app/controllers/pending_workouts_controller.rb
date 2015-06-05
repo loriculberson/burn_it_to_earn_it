@@ -1,0 +1,4 @@
+class PendingWorkoutsController < ApplicationController
+
+  
+end
