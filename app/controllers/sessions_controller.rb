@@ -5,10 +5,10 @@ class SessionsController < ApplicationController
     session[:user_id] = user.id
     
     if user.first_time?
-      redirect_to edit_user_path(user)
+      redirect_to edit_user_path
       flash[:success] = "Welcome #{current_user.nickname}! Please fill out this information."
     else  
-      redirect_to user_path(current_user)
+      redirect_to user_path
       flash[:success] = "Welcome back!"
     end
   end

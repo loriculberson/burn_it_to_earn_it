@@ -11,7 +11,7 @@ class HealthProfilesController < ApplicationController
     if current_user.update_attributes(user_health_params) && current_user.missing_weight?
       redirect_to edit_health_profile_path
     else
-      redirect_to user_path(current_user)
+      redirect_to user_path
       flash[:notice] = "Profile Complete!"
     end
   end

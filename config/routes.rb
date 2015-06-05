@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root 'home#index'
   # get  '/login'     => 'sessions#new'
   # post '/login'     => 'sessions#create'
-  resources :users
+  resource :user
   resource :health_profile
   resources :exercises
   resources :foods
