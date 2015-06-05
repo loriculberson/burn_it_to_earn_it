@@ -3,8 +3,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
-    @workouts = @user.workouts
+    @workouts = current_user.workouts
   end
 
   def update

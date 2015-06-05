@@ -5,7 +5,6 @@ $(document).ready(function(){
       items: 'all',
       minLength: 3,
       scrollHeight: 4,
-      alignWidth: false,
       
     source: function(splurgeFood, processCallback){
       $.ajax({
