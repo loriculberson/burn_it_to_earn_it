@@ -6,7 +6,7 @@ class WorkoutsController < ApplicationController
 
   def create
     if current_user 
-      Workout.create(workout_params.merge(user_id: current_user.id, exercise_id: params["exercise_id"]))
+      workout = Workout.create(workout_params.merge(user_id: current_user.id, exercise_id: params["exercise_id"]))
       redirect_to user_path
       flash[:notice] = "Workout saved!"
     else 
