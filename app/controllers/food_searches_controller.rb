@@ -3,7 +3,6 @@ class FoodSearchesController < ApplicationController
 
   def index
     respond_with Food.all(params[:food_search])
-    # @foods = Food.all(params[:food_search])
   end
 
 
