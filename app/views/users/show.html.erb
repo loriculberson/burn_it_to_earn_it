@@ -1,7 +1,7 @@
   <div class="row">
     <div class="col-xs-12">
 
-    <% if current_user.first_name.empty? %>
+    <% if current_user && !current_user.first_name.present? %>
       <h1> <%= current_user.nickname %>'s Dashboard </h1>
     <% else %>
       <h1> <%= current_user.first_name %>'s Dashboard </h1>

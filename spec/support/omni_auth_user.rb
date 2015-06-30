@@ -10,6 +10,6 @@ module OmniAuthUser
       :credentials => { :token =>"222333444" }
     })
     OmniAuth.config.mock_auth[:twitter] = auth
-    OmniAuth.config.mock_auth[:default] = auth
   end
+
 end

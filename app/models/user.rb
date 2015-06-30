@@ -1,14 +1,14 @@
 class User < ActiveRecord::Base
-  validates :nickname, :email, :token, presence: true, uniqueness: true
-  validates :age, :weight, presence: true
+  validates :nickname, :token, presence: true, uniqueness: true
 
   has_many :workouts
 
   def self.find_or_create_from_auth(data)
     user = User.find_or_create_by(provider: data.provider, uid: data.uid)
-    user.nickname = data.info.nickname
-    user.image_url = data.info.image
-    user.token = data.credentials.token
+    user.nickname   = data.info.nickname
+    user.image_url  = data.info.image
+    user.token      = data.credentials.token
+    
     user.save!
 
     user
