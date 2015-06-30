@@ -21,7 +21,6 @@ RSpec.describe "user interface with homepage", type: :feature do
     unregistered_user_lands_on_exercises_page
 
     expect(page).to have_content('Mango')
-    
   end
 
 end

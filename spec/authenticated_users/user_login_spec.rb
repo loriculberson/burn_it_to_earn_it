@@ -10,10 +10,8 @@ RSpec.describe "user login", type: :feature do
     expect(page).not_to have_content("Welcome twitter_mock_user")
     mock_omniauth_user
     click_on "Sign in with twitter"
-    # save_and_open_page
-    # within('li.twitter-name-correction') do
-      expect(page).to have_content("Welcome twitter_mock_user")
-    # end
+
+    expect(page).to have_content("Welcome twitter_mock_user")
   end
 end
 
