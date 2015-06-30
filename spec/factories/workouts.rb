@@ -1,7 +1,11 @@
 FactoryGirl.define do
   factory :workout do
-    user_id "MyString"
-exercise_id "MyString"
-  end
+    exercise_id 4
+    food_search "Pizza"
+    calories "320"
 
+    before :create do
+      create :exercise
+    end
+  end
 end

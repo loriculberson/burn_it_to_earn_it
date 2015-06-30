@@ -1,7 +1,9 @@
 <li><%= link_to "Home", root_path %></li>
 <% if current_user %>
   <li class="twitter-name-correction">Welcome <%= current_user.nickname %></li>
+  <% if current_user.image_url.present? %>
   <li><%= image_tag(current_user.image_url, class: "img-circle img-thumbnail")%></li>
+  <% end %>
   <li><%= link_to "My Account", user_path %></li>
   <li class="nav-right "> <%= link_to "Logout", logout_path %></li>
 <% else %>

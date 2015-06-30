@@ -1,5 +1,6 @@
 class Exercise < ActiveRecord::Base
-  validates :name, :mets, presence: true, uniqueness: true
+  validates :name, presence: true, uniqueness: true
+  validates :mets, presence: true
   has_many :workouts
 
   def burn_time(calories, weight) #model gets cal and weight from the view

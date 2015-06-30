@@ -1,12 +1,15 @@
 module OmniAuthUser
 
   def mock_omniauth_user
-    OmniAuth.config.mock_auth[:twitter] = OmniAuth::AuthHash.new({
+    auth = OmniAuth::AuthHash.new({
       :provider => 'twitter',
       :uid => '123545',
-      :info => { :nickname => 'twitter_mock_user',
-      :image => "mock_user_thumbnail_url"},
+      :info => {  :nickname => 'twitter_mock_user',
+                  :image => nil
+                },
       :credentials => { :token =>"222333444" }
     })
+    OmniAuth.config.mock_auth[:twitter] = auth
+    OmniAuth.config.mock_auth[:default] = auth
   end
 end

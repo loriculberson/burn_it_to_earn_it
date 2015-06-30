@@ -13,9 +13,10 @@ class ExercisesController < ApplicationController
 
     if current_user.nil?
       @exercises = Exercise.some
-    else current_user
+    else
       @exercises = Exercise.all
     end
   end
+
 end
 
