@@ -10,7 +10,6 @@ class WorkoutsController < ApplicationController
       redirect_to user_path
       flash[:notice] = "Workout saved!"
     else 
-      flash[:notice] = "You must log in with Twitter! "
       redirect_to '/auth/twitter'
     end
   end
@@ -20,5 +19,4 @@ class WorkoutsController < ApplicationController
     params.require(:workout).permit(:exercise_id,
                     :calories, :food_search)
   end
-
 end

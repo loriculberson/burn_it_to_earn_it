@@ -1,0 +1,8 @@
+Omniauth sets the mock user, by provider here:
+  ~/.rvm/gems/ruby-2.1.3/gems/omniauth-1.2.2/lib
+
+Our provider is set to default, not twitter
+
+We attempt to override it here: spec/support/omni_auth_user.rb
+
+

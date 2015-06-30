@@ -19,8 +19,8 @@
 
       <% @exercises.each do |exercise| %>
         <tr class="" border ="1">
-          <td class="exercise-check"><%= radio_button @workouts, "exercise_id", exercise.id %></td>
-          <td> <%= exercise.name %></td>
+          <td><%= radio_button_tag "workout[exercise_id]", exercise.id %></td>
+          <td> <%= label_tag "workout_exercise_id_#{exercise.id}", exercise.name %></td>
           <td> <%= exercise.burn_time(@calories, @weight) %></td>
         </tr>
       <% end %>
