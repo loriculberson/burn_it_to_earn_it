@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Food, type: :model do
   let(:food) { FactoryGirl.create(:food) }
 
-  xit "is valid when all parameters are given"  do
+  it "is valid when all parameters are given"  do
     expect(food).to be_valid
   end
 
@@ -17,7 +17,7 @@ RSpec.describe Food, type: :model do
     expect(food).not_to be_valid
   end
 
-  it "is not valid with duplicate name and mets" do
+  it "is not valid with duplicate name and calories" do
     food
     food2 = Food.new(name: "Cheeseburger", calories: 313)
     expect(food2).not_to be_valid 
