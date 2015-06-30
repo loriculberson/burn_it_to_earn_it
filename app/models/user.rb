@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  validates :nickname, :email, :token, presence: true, uniqueness: true
+  validates :age, :weight, presence: true
 
   has_many :workouts
 

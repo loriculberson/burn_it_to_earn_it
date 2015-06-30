@@ -1,7 +1,7 @@
 require "rails_helper"
 
-RSpec.feature "authenticated user adds favorites", type: :feature do
-    before(:each) do
+RSpec.describe "authenticated user adds favorites", type: :feature do
+  before(:each) do
     OmniAuth.config.mock_auth[:twitter] = nil
   end
 
