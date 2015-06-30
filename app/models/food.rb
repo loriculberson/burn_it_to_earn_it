@@ -1,5 +1,7 @@
 class Food < OpenStruct
-  
+  include ActiveModel::Validations
+  validates :name, :brand, :calories, presence: true
+
   def self.service
     @service ||= FoodSearchService.new
   end

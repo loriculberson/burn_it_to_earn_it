@@ -20,6 +20,7 @@ RSpec.describe "first time user", type: :feature do
 
   it "can see the health profile page after successful twitter login" do 
     log_in_with_twitter
+
     expect(current_path).to eq(edit_user_path)
   end
 
