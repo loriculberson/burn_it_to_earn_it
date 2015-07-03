@@ -12,20 +12,5 @@ RSpec.configure do |config|
   end
 
   config.backtrace_exclusion_patterns << %r{/gems/}
-
-  # config.before(:suite) do
-  #   DatabaseCleaner.strategy = :transaction
-  #   DatabaseCleaner.clean_with(:truncation)
-  # end
-
-  # config.around(:each) do |example|
-  #   DatabaseCleaner.cleaning do
-  #     example.run
-  #   end
-  # end
-# DATABASE CLEANER
-  # This just screams danger in so many ways
-  # Taken regretfully from https://gist.github.com/josevalim/470808
-
   
 end
