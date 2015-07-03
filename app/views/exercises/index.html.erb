@@ -9,7 +9,8 @@
 
   <div class="col-xs-8">
 
-  <%= form_tag workouts_path do %>
+  <% path = current_user ? workouts_path : pending_workouts_path%>
+  <%= form_tag path do %>
     <table class="table table-condensed">
       <tr>
         <th></th>
@@ -25,7 +26,6 @@
         </tr>
       <% end %>
     </table>
-    <%#= hidden_field_tag 'workout[weight]', @weight %>
     <%= hidden_field_tag 'workout[calories]', @calories %>
     <%= hidden_field_tag 'workout[food_search]', @food_search %>
     <%= submit_tag 'Save it!', class: "btn btn-success white-text" %>
@@ -40,3 +40,5 @@
     </div>  
   </div>
 </div>
+
+

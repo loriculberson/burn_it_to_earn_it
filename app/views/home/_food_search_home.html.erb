@@ -8,9 +8,9 @@
     <% if current_user.nil? %>
     <p>
       <%= number_field_tag(:weight, nil, placeholder: "enter weight", min: 50, class: "form-control black-text", required: true) %>
-   </p>
+    </p>
     <% end %>
-   <p class="centered">
+    <p class="centered">
       <%= submit_tag 'EARN IT NOW!', class: 'btn btn-success', id: "find-food", disabled: true %>
     </p>
 

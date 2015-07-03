@@ -6,8 +6,13 @@ class Workout < ActiveRecord::Base
   belongs_to :user
   belongs_to :exercise
 
-
   def burn_time
     exercise.burn_time(calories, user.weight) 
   end
+
+  def self.desc_sorted
+    order(:created_at => :desc)
+  end
+
 end
+

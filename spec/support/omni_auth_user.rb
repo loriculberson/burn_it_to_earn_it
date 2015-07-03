@@ -12,4 +12,16 @@ module OmniAuthUser
     OmniAuth.config.mock_auth[:twitter] = auth
   end
 
+  def mock_omniauth_user_authenticated
+    mock = mock_omniauth_user
+    user = User.find_or_create_by(provider: mock["provider"], uid: mock["uid"], 
+                                  nickname:mock["info"]["nickname"], 
+                                  token: mock["credentials"]["token"] 
+                                  )
+    user.age = 35
+    user.weight = 125
+    user.save!
+    user
+  end
+
 end
