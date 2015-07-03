@@ -52,7 +52,7 @@ RSpec.describe "first time user can search for food, select an exercise, and cre
     expect(current_path).to eq(edit_user_path)
   end
 
-  xit "can add a workout to the pending session" do
+  it "can add a workout to the pending session" do
     create_exercises
     user_searches_for_food
     user_selects_exercise
