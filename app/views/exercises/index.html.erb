@@ -20,7 +20,7 @@
 
       <% @exercises.each do |exercise| %>
         <tr class="" border ="1">
-          <td><%= radio_button_tag "workout[exercise_id]", exercise.id %></td>
+          <td><%= radio_button_tag "workout[exercise_id]", exercise.id, false, :checked => (exercise == @exercises.first)  %></td>
           <td> <%= label_tag "workout_exercise_id_#{exercise.id}", exercise.name %></td>
           <td> <%= exercise.burn_time(@calories, @weight) %></td>
         </tr>
