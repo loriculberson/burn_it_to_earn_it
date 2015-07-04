@@ -5,9 +5,9 @@ Rails.application.routes.draw do
 
   resource :user
   resource :health_profile
-  resources :exercises
+  resources :exercises, only: [:index]
   resources :foods
   resources :food_searches 
-  resources :workouts
+  resources :workouts, only: [:create, :destroy]
   resources :pending_workouts, only: [:create]
 end
