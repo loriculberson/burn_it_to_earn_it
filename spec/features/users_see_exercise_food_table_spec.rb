@@ -26,7 +26,7 @@ RSpec.describe "users see sample food and exercise table", type: :feature do
 
     within('.table') do
       expect(page).to have_content("Walk - moderate")
-      expect(page).to have_content("1 hour and 40 min")
+      expect(page).to have_content("1 hr 40 min")
       expect(page).to have_content("Cycling - moderate")
       expect(page).to have_content("35 min")
     end
