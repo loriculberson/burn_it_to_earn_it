@@ -3,7 +3,7 @@
 
     <p>
       <%= text_field(:food_search, nil, autocomplete: "off", 
-                      placeholder: "search for food", class: "form-control black-text typehead centered user-search-box tt-dropdown-menu", id: "scrollable-dropdown-menu", required: true) %>
+                      placeholder: "search for food", class: "form-control black-text typehead centered tt-dropdown-menu", id: "scrollable-dropdown-menu", required: true) %>
     </p>
     <% if current_user.nil? %>
     <p>
