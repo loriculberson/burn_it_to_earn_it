@@ -33,18 +33,18 @@
       <table class="table table-condensed">
       <tr>
         <th>Splurge</th>
-        <th>Calories</th>
-        <th>Exercise</th>
-        <th>Burn Time</th>
+        <th class="centered">Calories</th>
+        <th class="centered">Exercise</th>
+        <th class="centered">Burn Time</th>
         <th></th>
       </tr>
 
       <% @workouts.each do |workout| %>
         <tr class="" border ="1">
-          <td> <%= workout.food_search %></td>
-          <td> <%= workout.calories %></td>
-          <td> <%= workout.exercise.name %></td>
-          <td> <%= workout.burn_time %></td>
+          <td> <%= truncate(workout.food_search, length: 50)%></td>
+          <td class="centered"> <%= workout.calories %></td>
+          <td class="centered"> <%= workout.exercise.name %></td>
+          <td class="centered"> <%= workout.burn_time %></td>
         </tr>
       <% end %>
     </table>
