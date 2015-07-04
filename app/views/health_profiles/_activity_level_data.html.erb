@@ -1,34 +1,32 @@
-<!-- activity level -->
   <hr>
   <h3>How fit are you? </h3>
-  <h4>Select your current fitness level</h4>
 
   <div>
     <%= f.label(:fitness_level_sedentary) do %>
-      <%= f.radio_button(:fitness_level, "1: Sedentary") %>
-      <h5><strong> Sedentary:<br> You've heard of exercise </strong></h5>
+      <span class="pad-right2"><%= f.radio_button(:fitness_level, "1: Sedentary") %></span>
+      <strong> Sedentary: You've heard of exercise </strong>
     <% end %> 
-  </div>
+  </div><br>
 
   <div>
     <%= f.label(:fitness_level_somewhat_ative) do %>
-      <%= f.radio_button(:fitness_level, "2: Somewhat Fit") %>
-      <h5><strong> Somewhat Fit:<br> You participate in light exercise or take long walks </strong></h5>
+      <span class="pad-right2"><%= f.radio_button(:fitness_level, "2: Somewhat Fit") %></span>
+      <strong> Somewhat Fit: You participate in light exercise or take long walks </strong>
     <% end %> 
-  </div>
+  </div><br>
  
   <div>
     <%= f.label(:fitness_level_moderately_fit) do %>
-      <%= f.radio_button(:fitness_level, "3: Moderate") %><br>
-      <h5><strong> Moderate:<br> You exercise 2-3 times a week and push yourself pretty hard </strong></h5>
+      <span class="pad-right2"><%= f.radio_button(:fitness_level, "3: Moderate") %></span>
+      <strong> Moderate: You exercise 2-3 times a week and push yourself pretty hard </strong>
     <% end %> 
-  </div>
+  </div><br>
   
   <div>
     <%= f.label(:fitness_level_crazy_fit) do %>
-      <%= f.radio_button(:fitness_level, "4: Diesel Fit") %><br>
-      <h5><strong> Diesel Fit:<br> You participate in physical sports such as jogging or mountain-biking daily</strong></h5>
+      <span class="pad-right2"><%= f.radio_button(:fitness_level, "4: Diesel Fit") %></span>
+      <strong> Diesel Fit: You participate in physical sports such as jogging or mountain-biking daily</strong>
     <% end %> 
-  </div>
+  </div><br>
 
 

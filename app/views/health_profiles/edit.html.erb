@@ -1,32 +1,38 @@
-<div class="registration-image">
-  <div class="form col-xs-4 table-margin">
-    <h1><%= current_user.nickname %>'s Health Profile</h1>
+<div class="container">
+<div class="col-md-8">
+  <div class="form-area">  
 
+    <h1><%= current_user.nickname %>'s Health Profile</h1>
     <%= form_for(current_user, url: health_profile_path, method: :patch, role:"form") do |f| %>
 
-      <div>
-      <strong> Gender</strong> <br>
-        <%= f.label(:gender_female, "Female") %>
-        <%= f.radio_button(:gender, "female") %>
+      <div class="col-md-12">
+        <span class="pad-right"><strong> Gender </strong></span>
+          <%= f.label(:gender_female, "Female") %>
+          <span class="pad-right"><%= f.radio_button(:gender, "female") %></span>
 
-        <%= f.label(:gender_male, "Male") %>   
-        <%= f.radio_button(:gender, "male") %>
+          <%= f.label(:gender_male, "Male") %>   
+         <span class="pad-right"><%= f.radio_button(:gender, "male") %></span>
       </div>
 
-      <div >
+      <div class="form col-md-4" >
         <%= f.label(:age, "Age") %>   
         <%= f.number_field(:age, in: 1.0..100.0, step: 1.0, class: "form-control") %>
+      </div>
 
+      <div class="form col-md-4" >
         <%= f.label(:weight, "Weight (lbs)") %> 
         <%= f.number_field(:weight, in: 80..400.0, step: 1.0, min: 50, class: "form-control", required: true) %>
-      </div>
+      </div><br>
 
-      <div >
+      <div class="col-md-12">
         <%= render partial: "health_profiles/activity_level_data", locals: { f: f} %>
       </div>
+
+    <div class="row">
+      <div class="col-md-4 pad-left">
         <%= f.submit "Submit", class: "btn btn-info" %>
-
+      </div>
+    </div>
     <% end %>
-
-  
-
+  </div>
+  </div>

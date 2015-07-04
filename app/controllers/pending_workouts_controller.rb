@@ -8,7 +8,5 @@ class PendingWorkoutsController < ApplicationController
     session[:pending_workout] = pending_workout.contents
     flash[:success] = "Login with Twitter to save your workout."
     redirect_to '/auth/twitter' 
-    #after auth login, route to workout.create to save the worker
   end
-  
 end

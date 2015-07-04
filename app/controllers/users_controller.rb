@@ -1,8 +1,12 @@
 class UsersController < ApplicationController
-  def new
+
+  def edit
+    @body_class="user-show-image"
   end
 
   def show
+    @body_class="user-show-image"
+
     if current_user 
       @workouts = current_user.workouts.desc_sorted
     else

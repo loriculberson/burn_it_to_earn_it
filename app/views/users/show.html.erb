@@ -1,12 +1,8 @@
   <div class="row">
     <div class="col-xs-12">
 
-    <% if current_user && !current_user.first_name.present? %>
-      <h1> <%= current_user.nickname %>'s Dashboard </h1>
-    <% else %>
-      <h1> <%= current_user.first_name %>'s Dashboard </h1>
-    <% end %>
-      <div class="col-xs-3 centered" id="edit">
+
+      <div class="col-xs-3 centered pad-top" id="edit">
         <%= image_tag(current_user.image_url, class: "img-circle img-thumbnail user-image") %>
         <h4><em> <%= current_user.nickname %></em></h4>
         <hr>
@@ -23,8 +19,13 @@
       </div>
 
       <div class='col-xs-9'>
-        <div>
-         <%= render :partial => 'home/food_search_home' %>
+        <div class="centered pad-top">
+          <% if current_user && !current_user.first_name.present? %>
+            <h1> <%= current_user.nickname %>'s Dashboard </h1>
+          <% else %>
+            <h1> <%= current_user.first_name %>'s Dashboard </h1>
+          <% end %>
+         <%= render :partial => 'food_search_user' %>
         </div>
       </div>
 
@@ -33,18 +34,18 @@
       <table class="table table-condensed">
       <tr>
         <th>Splurge</th>
-        <th>Calories</th>
-        <th>Exercise</th>
-        <th>Burn Time</th>
+        <th class="centered">Calories</th>
+        <th class="centered">Exercise</th>
+        <th class="centered">Burn Time</th>
         <th></th>
       </tr>
 
       <% @workouts.each do |workout| %>
         <tr class="" border ="1">
-          <td> <%= workout.food_search %></td>
-          <td> <%= workout.calories %></td>
-          <td> <%= workout.exercise.name %></td>
-          <td> <%= workout.burn_time %></td>
+          <td> <%= truncate(workout.food_search, length: 50)%></td>
+          <td class="centered"> <%= workout.calories %></td>
+          <td class="centered"> <%= workout.exercise.name %></td>
+          <td class="centered"> <%= workout.burn_time %></td>
         </tr>
       <% end %>
     </table>

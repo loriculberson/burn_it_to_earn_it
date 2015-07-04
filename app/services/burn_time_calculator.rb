@@ -12,9 +12,9 @@ class BurnTimeCalculator
     if hours == "0" 
       minutes.to_i.to_s + " min"
     elsif hours == "1"
-      hours + " hour and " + minutes.to_i.to_s + " min"
+      hours + " hr " + minutes.to_i.to_s + " min"
     else
-      hours + " hours and " + minutes.to_i.to_s + " min"
+      hours + " hrs " + minutes.to_i.to_s + " min"
     end
   end
 

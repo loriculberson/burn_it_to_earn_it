@@ -3,6 +3,12 @@ img.img-circle.img-thumbnail.user-image {
   width: 150px;
 }
 
+.user-show-image { 
+  background: asset-url("paper_background.jpg"); 
+  background-size: cover;
+  height:100vh;
+}
+
 .centered {
   margin-left: auto;
   margin-right: auto; 
@@ -32,4 +38,32 @@ list-style-type: none;
 #edit a{
   color:#0000ff;
   text-align: center;
+}
+
+.pad-right {
+  padding-right: 30px;
+}
+
+.pad-right2 {
+  padding-right: 20px;
+}
+
+.side-by-side label.inline {
+  padding: 20px;
+}
+
+.pad-left {
+  padding-left: 60px;
+}
+
+.pad-top {
+  padding-top: 40px;
+}
+
+.search-box {
+   margin: 0 auto; //this centers the button and input field item
+}
+
+.form-inline .form-control {
+  width: 280px;
 }

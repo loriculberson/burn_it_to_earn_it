@@ -8,13 +8,12 @@
 </head>
 <%= render 'layouts/nav_bar' %>
   <body class="opacity <%=@body_class%>">
-    <div class="container">
       <div class="flash">
         <% flash.each do |name, msg| %>
           <%= content_tag :div, msg, class: "alert alert-#{name} text-center" %>
         <% end %>
       </div>
-
+    <div class="container">
       <%= yield %>
     </div>
   </body>

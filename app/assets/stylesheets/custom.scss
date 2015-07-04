@@ -65,3 +65,10 @@ ul.nav li a:hover, ul.nav li a:active {
 .opacity-low{
   opacity:0.6;
 }
+
+//page no longer moves based in if there was a flash message
+.flash {
+  position: fixed;
+  z-index: 99;
+  width:100%;
+}

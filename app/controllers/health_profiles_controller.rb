@@ -1,10 +1,10 @@
 class HealthProfilesController < ApplicationController
 
   def edit
+    @body_class="registration-image"
   end
   
   def index
-    @body_class="registration-image"
   end
 
   def update
