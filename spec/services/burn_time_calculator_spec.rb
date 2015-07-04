@@ -20,7 +20,7 @@ RSpec.describe BurnTimeCalculator do
       mets = 3.5
 
       burn_time_calculator = BurnTimeCalculator.new(calories, weight, mets)
-      time = "1 hour and 40 min"
+      time = "1 hr 40 min"
 
       expect(burn_time_calculator.burn_time).to eq(time)
     end
@@ -31,7 +31,7 @@ RSpec.describe BurnTimeCalculator do
       mets = 1.3
 
       burn_time_calculator = BurnTimeCalculator.new(calories, weight, mets)
-      time = "4 hours and 30 min"
+      time = "4 hrs 30 min"
 
       expect(burn_time_calculator.burn_time).to eq(time)
     end

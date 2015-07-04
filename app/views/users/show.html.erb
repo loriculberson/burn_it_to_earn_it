@@ -14,8 +14,8 @@
         
         <strong>Fitness Level</strong> 
         <p><%= current_user.fitness_level%></p>
-        <p><%= link_to "Edit profile", edit_user_path %></p>
-        <p><%= link_to "Edit Health profile", edit_health_profile_path %></p>
+        <p class="word-link"><%= link_to "Edit profile", edit_user_path %></p>
+        <p><span class="word-link"> <%= link_to "Edit Health profile", edit_health_profile_path %></span></p>
       </div>
 
       <div class='col-xs-9'>
@@ -33,7 +33,7 @@
       <h2> My Scheduled Workouts</h2>
       <table class="table table-condensed">
       <tr>
-        <th>Splurge</th>
+        <th>Splurge Food</th>
         <th class="centered">Calories</th>
         <th class="centered">Exercise</th>
         <th class="centered">Burn Time</th>
@@ -46,6 +46,7 @@
           <td class="centered"> <%= workout.calories %></td>
           <td class="centered"> <%= workout.exercise.name %></td>
           <td class="centered"> <%= workout.burn_time %></td>
+          <td> <span class="word-link"> <%= link_to 'Delete', workout_path(workout), method: :delete, data: { confirm: 'Are you sure?' } %></span></td>
         </tr>
       <% end %>
     </table>

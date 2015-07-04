@@ -35,10 +35,10 @@ list-style-type: none;
   width: 280px;
 }
 
-#edit a{
-  color:#0000ff;
-  text-align: center;
-}
+// #edit a{
+//   color:#0000ff;
+//   text-align: center;
+// }
 
 .pad-right {
   padding-right: 30px;
@@ -66,4 +66,23 @@ list-style-type: none;
 
 .form-inline .form-control {
   width: 280px;
+}
+
+.table > tfoot > tr > td {
+  line-height: .8em;
+}
+
+.pagination a {
+  color: black;
+}
+
+.word-link {
+  a, p {
+    color: #694489;
+    text-decoration: none;
+  }
+
+    a:hover {
+      color: red;
+    }
 }

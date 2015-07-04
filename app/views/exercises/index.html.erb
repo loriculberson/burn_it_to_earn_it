@@ -15,22 +15,22 @@
       <tr>
         <th></th>
         <th>Exercise</th>
-        <th>Time to Burn it Off</th>
+        <th class="centered">Time to Burn it Off</th>
       </tr>
 
       <% @exercises.each do |exercise| %>
         <tr class="" border ="1">
           <td ><%= radio_button_tag "workout[exercise_id]", exercise.id, false, :checked => (exercise == @exercises.first)  %></td>
           <td> <%= label_tag "workout_exercise_id_#{exercise.id}", exercise.name %></td>
-          <td class="small-text"> <%= exercise.burn_time(@calories, @weight) %></td>
+          <td class="centered"> <%= exercise.burn_time(@calories, @weight) %></td>
         </tr>
       <% end %>
     </table>
     <%= hidden_field_tag 'workout[calories]', @calories %>
     <%= hidden_field_tag 'workout[food_search]', @food_search %>
-    <%= submit_tag 'Save it!', class: "btn btn-success white-text" %>
+    <p> <%= submit_tag 'Save it!', class: "btn btn-success white-text" %> <em>(click here to save your workout!)</em></p>
   <% end %>
-    <em>(click here to save your workout!)</em>
+ 
   </div>
 
     <div class="col-xs-4 pull-right">
