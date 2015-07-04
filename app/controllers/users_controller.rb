@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-  def new
+  def edit
+    @body_class="registration-image"
   end
 
   def show
