@@ -11,7 +11,7 @@
 
   <% path = current_user ? workouts_path : pending_workouts_path%>
   <%= form_tag path do %>
-    <table class="table table-condensed">
+    <table class="table table-condensed small-text">
       <tr>
         <th></th>
         <th>Exercise</th>
@@ -20,9 +20,9 @@
 
       <% @exercises.each do |exercise| %>
         <tr class="" border ="1">
-          <td><%= radio_button_tag "workout[exercise_id]", exercise.id, false, :checked => (exercise == @exercises.first)  %></td>
+          <td ><%= radio_button_tag "workout[exercise_id]", exercise.id, false, :checked => (exercise == @exercises.first)  %></td>
           <td> <%= label_tag "workout_exercise_id_#{exercise.id}", exercise.name %></td>
-          <td> <%= exercise.burn_time(@calories, @weight) %></td>
+          <td class="small-text"> <%= exercise.burn_time(@calories, @weight) %></td>
         </tr>
       <% end %>
     </table>

@@ -1,12 +1,8 @@
   <div class="row">
     <div class="col-xs-12">
 
-    <% if current_user && !current_user.first_name.present? %>
-      <h1> <%= current_user.nickname %>'s Dashboard </h1>
-    <% else %>
-      <h1> <%= current_user.first_name %>'s Dashboard </h1>
-    <% end %>
-      <div class="col-xs-3 centered" id="edit">
+
+      <div class="col-xs-3 centered pad-top" id="edit">
         <%= image_tag(current_user.image_url, class: "img-circle img-thumbnail user-image") %>
         <h4><em> <%= current_user.nickname %></em></h4>
         <hr>
@@ -23,8 +19,13 @@
       </div>
 
       <div class='col-xs-9'>
-        <div>
-         <%= render :partial => 'home/food_search_home' %>
+        <div class="centered pad-top">
+          <% if current_user && !current_user.first_name.present? %>
+            <h1> <%= current_user.nickname %>'s Dashboard </h1>
+          <% else %>
+            <h1> <%= current_user.first_name %>'s Dashboard </h1>
+          <% end %>
+         <%= render :partial => 'food_search_user' %>
         </div>
       </div>
 
