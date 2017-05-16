@@ -80,6 +80,8 @@ GEM
     factory_girl_rails (4.5.0)
       factory_girl (~> 4.5.0)
       railties (>= 3.0.0)
+    faraday (0.12.1)
+      multipart-post (>= 1.2, < 3)
     ffi (1.9.8)
     fitgem (0.12.1)
       oauth
@@ -106,6 +108,7 @@ GEM
     mini_portile (0.6.2)
     minitest (5.7.0)
     multi_json (1.11.0)
+    multipart-post (2.0.0)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     oauth (0.4.7)
@@ -237,6 +240,7 @@ DEPENDENCIES
   database_cleaner
   dotenv-rails
   factory_girl_rails (~> 4.0)
+  faraday
   fitgem
   jbuilder (~> 2.0)
   jquery-rails
@@ -256,3 +260,6 @@ DEPENDENCIES
   uglifier (>= 1.3.0)
   vcr
   web-console (~> 2.0)
+
+BUNDLED WITH
+   1.10.6

@@ -14,6 +14,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'omniauth-twitter'
 gem 'fitgem'
 gem 'responders' #json
+gem 'faraday'
 
 group :development, :test do
   gem 'byebug'
