@@ -4,3 +4,5 @@
 require File.expand_path('../config/application', __FILE__)
 
 Rails.application.load_tasks
+
+ActiveRecord::Base.logger = Logger.new('/dev/null')
