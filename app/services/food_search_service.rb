@@ -1,13 +1,26 @@
 class FoodSearchService
-  attr_reader :client
+
+  attr_reader :connection
 
   def initialize
-    config = YAML.load(ERB.new(File.read(Rails.root.join("config/fitgem.yml"))).result)
-    @client = Fitgem::Client.new(config[:oauth])
+    @connection = Faraday.new(:url => "https://api.nal.usda.gov")
   end
 
   def search_foods(food)
-    client.find_food("#{food}")
+    raw_food_data = parse(
+      connection.get(
+      "/ndb/search/?format=json&q=#{food}&sort=n&max=25&offset=0&api_key=#{ENV['USDA_KEY']}" 
+      )
+    )
+    raw_food_data[:list][:item].map do |food|
+      food[:name]
+    end
   end
 
+
+  private
+
+  def parse(response)
+    JSON.parse(response.body, symbolize_names: true)
+  end
 end
