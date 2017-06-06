@@ -8,11 +8,12 @@ $(document).ready(function(){
       
     source: function(splurgeFood, processCallback){
       $.ajax({
-          url: '/food_searches.json',
+          url: '/foods.json',
           data: {food_search: splurgeFood},
+
           success: function(results){
             results.forEach(function(result){
-              result.name = result.table.brand + ' '+ result.table.name + ' | Calories: ' + result.table.calories + ' ' 
+              result.name =  result.table.name + ' | Calories: ' + result.table.calories + ' ' 
             })
             processCallback(results);  
             // #function to tell typehead what the results are

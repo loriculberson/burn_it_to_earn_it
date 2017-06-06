@@ -1,14 +1,8 @@
-class Food < OpenStruct
-  include ActiveModel::Validations
-  validates :name, :brand, :calories, presence: true
+class Food < ActiveRecord::Base
+  validates :name, :calories, presence: true
 
-  def self.service
-    @service ||= FoodSearchService.new
-  end
-
-  def self.all(food_name)
-    service.search_foods(food_name).values[0].map do |food|
-      Food.new(food)
-    end
+  def self.search_by_name(food)
+    Food.where("name ilike ?", "#{food}%")
   end
 end
+

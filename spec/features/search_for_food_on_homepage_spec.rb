@@ -10,8 +10,8 @@ RSpec.describe "user interface with homepage", type: :feature do
 
   def unregistered_user_lands_on_exercises_page
     visit '/'
-    fill_in('search for food', with: 'mango')
-    click_on("Mango, Raw | Calories: 134")
+    fill_in('search for food', with: 'mcd')
+    click_on("MCDONALD'S, Filet-O-Fish | 400 calories")
 
     fill_in('enter weight', with: '150')
     click_on 'EARN IT NOW!'
@@ -20,7 +20,9 @@ RSpec.describe "user interface with homepage", type: :feature do
   it "user searches for a food, enters weight", js: true do
     unregistered_user_lands_on_exercises_page
 
-    expect(page).to have_content('Mango')
+    expect(page).to have_content('My Scheduled Workouts')
+    expect(page).to have_content("MCDONALD'S, Filet-O-Fish")
+
   end
 
 end

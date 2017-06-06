@@ -14,6 +14,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'omniauth-twitter'
 gem 'usda-nutrient-database'
 gem 'activerecord-import'
+gem 'responders', '~> 2.0'
+gem 'rake-progressbar', '~> 0.0.5'
 
 group :development, :test do
   gem 'byebug'

@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resource :health_profile
   resources :exercises, only: [:index]
   resources :foods
-  resources :food_searches 
+  # resources :food_searches 
   resources :workouts, only: [:create, :destroy]
   resources :pending_workouts, only: [:create]
 end

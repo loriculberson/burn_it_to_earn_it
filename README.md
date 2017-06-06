@@ -5,3 +5,5 @@
  <p><strong>Tech Stack:</strong> Rails 4.2, Bootstrap, RSpec.</p>
 
 <p><strong>Visit:  </strong><a href="http://burn-it-to-earn-it.herokuapp.com"> burn-it-to-earn-it.herokuapp.com </a></p>
+
+<p><strong>Resources: </strong><p>https://github.com/mattbeedle/usda-nutrient-database</p>
