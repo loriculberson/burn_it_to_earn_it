@@ -17,10 +17,4 @@ RSpec.describe Food, type: :model do
     expect(food).not_to be_valid
   end
 
-  it "is not valid with duplicate name and calories" do
-    food
-    food2 = Food.new(name: "Cheeseburger", calories: 313)
-    expect(food2).not_to be_valid 
-  end
-
 end

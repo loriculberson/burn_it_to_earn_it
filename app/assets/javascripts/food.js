@@ -13,10 +13,10 @@ $(document).ready(function(){
 
           success: function(results){
             results.forEach(function(result){
-              result.name =  result.table.name + ' | Calories: ' + result.table.calories + ' ' 
+              result.name =  result.name + ' | Calories: ' + result.calories + ' ' 
             })
             processCallback(results);  
-            // #function to tell typehead what the results are
+            // #function to tell typeahead what the results are
           }
       })
     },
