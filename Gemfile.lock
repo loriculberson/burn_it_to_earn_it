@@ -227,7 +227,7 @@ GEM
       composite_primary_keys
       faraday
       rubyzip
-    vcr (2.9.3)
+    vcr (3.0.3)
     web-console (2.1.2)
       activemodel (>= 4.0)
       binding_of_caller (>= 0.7.2)
