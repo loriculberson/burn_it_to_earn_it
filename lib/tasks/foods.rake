@@ -18,7 +18,7 @@ task upsert_foods: :environment do
       food.serving_unit = single_serving.measurement_description
 
       food.save!
-      puts "Food: #{{food.name}} USDA ID: #{{food.usda_id}}"
+      puts "Food: #{food.name} USDA ID: #{food.usda_id}"
     end
   end
   bar.finished
