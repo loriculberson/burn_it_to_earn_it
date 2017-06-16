@@ -1,5 +1,6 @@
 desc "Upsert foods from USDA database"
 task upsert_foods: :environment do
+  verbose = false
   bar = RakeProgressbar.new(UsdaNutrientDatabase::Food.count)
 
   UsdaNutrientDatabase::Food.all.each do |usda_food|
@@ -18,7 +19,7 @@ task upsert_foods: :environment do
       food.serving_unit = single_serving.measurement_description
 
       food.save!
-      puts "Food: #{food.name} USDA ID: #{food.usda_id}"
+      pp "Food: #{food.name} USDA ID: #{food.usda_id}" if verbose
     end
   end
   bar.finished
