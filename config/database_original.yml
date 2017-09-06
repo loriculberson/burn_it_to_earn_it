@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: burn_it_to_earn_it_development
+
+test:
+  <<: *default
+  database: burn_it_to_earn_it_test
+
+production:
+  <<: *default
+  database: burn_it_to_earn_it_production
+  username: burn_it_to_earn_it
+  password: <%= ENV['BURN_IT_TO_EARN_IT_DATABASE_PASSWORD'] %>
